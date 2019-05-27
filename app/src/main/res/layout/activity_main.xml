@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- 이미지를 보여주는 뷰 -->
+    <!-- 이미지파일들을 res폴더>>drawable폴더안에 복사붙이기(주의! 대문자나 특수문자는 안됨. 숫자도 첫글자 안됨)-->
+    <!-- src 속성 : source의 약자로서 보여줄 이미지파일의 위치를 지정 ( @/drawerble/korea ) -->
+    <!-- scaleType 속성 : 이미지의 scale(확대/축소) 방법을 선택지정 [center/fitXY/centerCrop등.]-->
+    <!-- clickable 속성 : 이미지뷰는 버튼이 아니므로 기본적으로는 클릭에 반응하지 못함. 이를 설정할 수 있음.[true/false]-->
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/korea"
+        android:scaleType="centerInside"
+        android:background="@drawable/ic_launcher_background"
+        android:clickable="true"
+        android:layout_marginBottom="16dp"/>
+
+    <!--버튼 4개를 추가하고 각 버튼을 클릭하였을 때 이미지뷰의 이미지를 변경하기-->
+    <!--버튼 클릭을 제어하기 위해 버튼마다 고유의 id속성을 지정-->
+    <Button
+        android:id="@+id/btn01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="australia"/>
+    <Button
+        android:id="@+id/btn02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="belgium"/>
+    <Button
+        android:id="@+id/btn03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="canada"/>
+    <Button
+        android:id="@+id/btn04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="korea"/>
+
+</LinearLayout>
